@@ -1,0 +1,19 @@
+.TH SHELL "2022-NOVEMBER-29" "Holberton-School" simple-shell - man page
+
+.SH NAME
+	Simple shell(sh) - It is a command language interpreter that execute commands read from input devices such as keyboards or from files.
+
+.SH DESCRIPTION
+	Shell can be accessed by user using a command line interface. A special program called Terminal in linux/macOS or Command Prompt in Windows OS is provided to type in the human readable commands such as “cat”, “ls” etc. and then it is being execute. The result is then displayed on the terminal to the user.
+
+.SH OPTIONS
+	The command options is " - " after the main command followed by a space.
+
+	Example (ls -s) - Read commands from the standard input
+
+.SH SYNOPSIS
+	$ sh [options] [argument]
+
+.SH AUTHOR
+	Raquel Bezerra
+	Nikki Alderman
