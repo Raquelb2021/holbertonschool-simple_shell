@@ -1,5 +1,20 @@
 #include "shellheader.h"
-
+/*Read line*/
+char* kash_read_line() {
+	    char *line = NULL;
+	        size_t buffer = 0;
+		errno = 0;
+		   ssize_t strlen = getline(&line, &buffer, stdin);
+		   if (strlen < 0)
+		   {
+			   if (errno)
+			   {
+				   perror("kash");
+			   }
+			   exit(1);
+		   }
+		        return (line);
+}
 /*Exit the shell*/
 void kash_exit(char **args)
 {

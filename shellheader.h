@@ -1,6 +1,8 @@
 #ifndef SHELLHEADER_H
 #define SHELLHEADER_H
 
+
+#include <errno.h>
 #include <sys/wait.h>
 #include <sys/types.h>
 #include <unistd.h>
