@@ -10,7 +10,7 @@
 #include <stdio.h>
 #include <string.h>
 
-int main(void);
+
 char* kash_read_line();
 char** kash_split_line(char *line);
 void kash_exec(char **args);
