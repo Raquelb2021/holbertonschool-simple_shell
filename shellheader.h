@@ -3,14 +3,14 @@
 
 
 #include <errno.h>
-#include <sys/wait.h>
-#include <sys/types.h>
-#include <unistd.h>
-#include <stdlib.h>
+#include <stdbool.h>
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
+#include <sys/wait.h>
+#include <unistd.h>
 
-int main(void);
 
+int main();
 
 #endif
