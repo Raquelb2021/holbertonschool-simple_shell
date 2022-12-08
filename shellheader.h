@@ -11,6 +11,6 @@
 #include <stdbool.h>
 
 int main(int ac, char **argv);
-
+void execmd(char **argv);
 
 #endif
