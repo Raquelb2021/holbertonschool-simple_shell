@@ -3,22 +3,19 @@
  * shell_loop - print a prompt
  *
  */
-void shell_loop(void)
+int main(int ac, char **argv)
 {
-	char *line;
-	char **tokens;
+	char *prompt = "$ ";
+	char *lineptr;
+	size_t n = 0;
 
-	while (true)
-	{
-		printf("$ ");
-		line = shell_read_line();
-		tokens = shell_split_line(line);
+	/*declaring void variables*/
+	(void)ac; (void)argv;
 
-	if (tokens[0] != NULL)
-	{
-		shell_exec(tokens);
-	}
-		free(tokens);
-		free(line);
-	}
+	printf("%s", prompt);
+	getline(&lineptr, &n, stdin);
+	printf("%s\n", lineptr);
+
+	free(lineptr);
+	return (0);
 }

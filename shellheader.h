@@ -10,10 +10,7 @@
 #include <errno.h>
 #include <stdbool.h>
 
-void shell_exec(char **args);
-char **shell_split_line(char *line);
-char *shell_read_line();
-void shell_loop(void);
+int main(int ac, char **argv);
 
 
 #endif
