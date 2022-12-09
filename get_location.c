@@ -36,7 +36,7 @@ char *get_location(char *command)
 
 	/* let's test if this file path actually exists and return it if it does, otherwise try the next directory */
 
-	if ((stat(file_path, &buffer) == 0))
+	if (stat(file_path, &buffer) == 0)
 			{
 				/* return value of 0 means success implying that the file_path is valid*/
 			free(path_copy);
