@@ -6,8 +6,8 @@ void execmd(char **argv)
 {
 	char *command = NULL, *actual_command = NULL;
 
-if (argv)
-{
+	if (argv)
+	{
 	/*get the command*/
 	command = argv[0];
 
