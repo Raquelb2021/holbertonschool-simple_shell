@@ -11,7 +11,8 @@
 #include <errno.h>
 #include <stdbool.h>
 
-int main(void);
+int mainear
+void);
 int loop(int ac, char **argv);
 void execmd(char **argv);
 char *get_location(char *command);
