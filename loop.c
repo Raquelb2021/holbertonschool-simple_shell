@@ -3,7 +3,7 @@
  * shell_loop - print a prompt
  *
  */
-int main(int ac, char **argv)
+int loop(int ac, char **argv)
 {
 	char *prompt = "$ ";
 	char *lineptr= NULL, *lineptr_copy = NULL;
