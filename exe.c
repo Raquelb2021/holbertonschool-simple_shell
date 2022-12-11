@@ -1,23 +1,29 @@
 #include "shellheader.h"
 /**
- *
+ * exec_shell - create a child and use the exec()
+ * We use the strtok() function from <string.h> to split the string on
+ * instances of whitespace.
+ * @args: arguments
  */
-void execmd(char **argv)
+void exec_shell(char **args)
 {
-	char *command = NULL, *actual_command = NULL;
+	pid_t child_pid = fork();
 
-	if (argv)
+	if (child_pid == 0)
 	{
-	/*get the command*/
-	command = argv[0];
+		execve(args[0], args, NULL);
+		perror("Error1");
+		exit(1);
 
-	/* generate the path to this command before passing it to execve */
-	actual_command = get_location(command);
-
-	/*execute the command with execve */
-	if (execve(actual_command, argv, NULL) == -1)
+	}
+	else if (child_pid > 0)
 	{
-		perror("Error:");
-		}
+		int status;
+
+		wait(&status);
+	}
+	else
+	{
+		perror("Error2");
 	}
 }
