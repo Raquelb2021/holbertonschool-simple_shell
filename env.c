@@ -2,20 +2,15 @@
 /**
  * main - prints the current environment
  * Return: return 0 if success
- * @argc: unused argument count
- * @argv: unused argument vector
- * @envp: third parameter is an array of pointers to environment variables
  */
-int main(__attribute__((unused))int argc, char **argv, char **envp)
+int main(void)
 {
+	char **s = environ;
 
-	char **env;
-
-	for (env = envp; *env != 0; env++)
+	for (; *s; s++)
 	{
-		char *thisEnv = *env;
-
-		printf("%s\n", thisEnv);
+		printf("%s\n", *s);
 	}
+
 	return (0);
 }
