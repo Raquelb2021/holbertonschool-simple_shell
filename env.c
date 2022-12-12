@@ -5,12 +5,11 @@
  */
 int main(void)
 {
-	char **s = environ;
-
-	for (; *s; s++)
-	{
-		printf("%s\n", *s);
-	}
-
+	printf("USER = %s\n", getenv("USER"));
+	printf("LANGUAGE = %s\n", getenv("LANGUAGE"));
+	printf("SESSION = %s\n", getenv("SESSION"));
+	printf("COMPIZ_CONFIG_PROFILE = %s\n", getenv("COMPIZ_CONFIG_PROFILE"));
+	printf("SHLVL = %s\n", getenv("SHLVL"));
+	printf("PATH = %s\n", getenv("PATH"));
 	return (0);
 }
