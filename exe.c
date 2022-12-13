@@ -5,25 +5,32 @@
  * instances of whitespace.
  * @args: arguments
  */
-void exec_shell(char **args)
+int exec_shell(char **args)
 {
-	pid_t child_pid = fork();
+	pid_t cpid;
+	int status;
 
-	if (child_pid == 0)
+	if (strcmp(args[0], "exit") == 0)
 	{
-		execve(args[0], args, NULL);
-		perror("Error1");
-		exit(1);
+		 return dash_exit(args);
+	}
+
+	cpid = fork();
+
+	if (cpid == 0)
+	{
+		if (execvp(args[0], args) < 0)
+		printf("command not found: %s\n", args[0]);
+		exit(EXIT_FAILURE);
 
 	}
-	else if (child_pid > 0)
-	{
-		int status;
+	else if (cpid < 0)
+		printf("Error forking\n");
 
-		wait(&status);
-	}
 	else
 	{
-		perror("Error2");
+		waitpid(cpid, & status, WUNTRACED);
+
 	}
+	return (1);
 }
