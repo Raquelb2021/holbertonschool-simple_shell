@@ -31,8 +31,11 @@ int main(__attribute__((unused)) int argc, __attribute__((unused)) char **argv)
 		{
 			exec_shell(tokens);
 		}
+
+
 		free(tokens);
 		free(line);
+
 	}
 	return (0);
 }
