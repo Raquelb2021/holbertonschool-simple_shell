@@ -11,10 +11,14 @@
 #include <stdbool.h>
 
 
-
 void exec_shell(char **args);
 char *read_line_shell(void);
 char **split_line(char *line);
 
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> a9b7d48f55f22d7edeb9512edee335f4eff64514
 #endif
