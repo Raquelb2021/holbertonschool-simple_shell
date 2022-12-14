@@ -22,6 +22,7 @@ void exec_shell(char **args)
 	else if (cpid > 0)
 	{
 		int status;
+
 		wait(&status);
 	}
 	else
