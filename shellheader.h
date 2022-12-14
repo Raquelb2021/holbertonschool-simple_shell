@@ -11,10 +11,11 @@
 #include <stdbool.h>
 
 
-
 void exec_shell(char **args);
 char *read_line_shell(void);
 char **split_line(char *line);
 
-int main(__attribute__((unused)) int argc, __attribute__((unused)) char **argv);
+
+
+
 #endif
