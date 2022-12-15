@@ -1,5 +1,7 @@
 #ifndef SHELLHEADER_H
 #define SHELLHEADER_H
+#include <errno.h>
+
 
 #include <stdio.h>
 #include <stdlib.h>
