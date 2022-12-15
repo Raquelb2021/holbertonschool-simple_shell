@@ -15,6 +15,13 @@ void exec_shell(char **args);
 char *read_line_shell(void);
 char **split_line(char *line);
 
+/*external environment variable*/
+extern char **environ;
 
+/*environment*/
+int print_env(void);
+
+/*error management*/
+int _putchar(char c);
 
 #endif
